@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv=Content-type content="text/html; charset=utf-8">
+  <title>snack.js tests</title>
+  <link rel="stylesheet" href="../vendor/qunit/qunit/qunit.css" type="text/css">
+  <style>
+  body {
+    font-family: 'Helvetica', 'Verdana';
+  }
+  code {
+    font-size: 120%;
+    background-color: rgba(255, 255, 255, 0.75);
+  }
+  #fixture {
+    background: yellow;
+    padding: 10px;
+    margin: 10px 0;
+    border: solid 1px #ccc;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    border-radius: 1em;
+  }
+  </style>
+  <script src="../vendor/qunit/qunit/qunit.js"></script>
+</head>
+<body>
+  <h1 id="qunit-header">QUnit Test Suite</h1>
+  <h2 id="qunit-banner"></h2>
+  <div id="qunit-testrunner-toolbar"></div>
+  <h2 id="qunit-userAgent"></h2>
+  <ol id="qunit-tests"></ol>
+  <div id="fixture">
+    <a id=delegatee>Delegatee</a>
+    <b id=notDelegatee>Not Delegatee</b>
+    <a href="#fail" id=preventDefault>preventDefault</a>
+    <a href="#fail">
+      <span id="stopPropagation">stopPropagation</span>
+    </a>
+  </div>
+
+  <script src="../src/listener.js"></script>
+  <script src="../vendor/ender.js"></script>
+  <script src="../src/ender.js"></script>
+  <script src="tests.js"></script>
+</body>
+</html>
