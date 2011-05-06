@@ -302,7 +302,7 @@ __undefined__
 
 ### Examples
 
-`javascript
+```javascript
 listener({
   event: 'click',
   node: document.getElementById('foo')
