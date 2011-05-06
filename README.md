@@ -12,6 +12,50 @@ Features
 - Event delegation with or without a selector engine
 - Ender bridge with wrapper prototype methods
 
+Installation
+------------
+
+Install with [npm](http://npmjs.org)
+
+`$ npm install listener`
+
+... or build with ender
+
+`$ ender build listener`
+
+... or just download and include like any other script.
+
+Method signature overview
+-------------------------
+
+Please see full API docs down the page
+
+```javascript
+listener(params, handler)
+
+listenerObj.attach()
+listenerObj.detach()
+listenerObj.fire([arg1, [argN]])
+
+listener.preventDefault(event)
+listener.stopPropagation(event)
+```
+
+Ender bridge
+
+```javascript
+// ender methods
+ender.listener(params, handler)
+ender.preventDefault(event)
+ender.stopPropagation(event)
+
+// ender element wrapper prototype methods
+wrap.attach(event, handler)
+wrap.detach(namespace)
+wrap.fire(namespace)
+wrap.delegate(event, delegation, handler)
+```
+
 Ender Integration
 -----------------
 
@@ -166,7 +210,8 @@ listenerObj.attach()
 
 
 
-### listenerObj.detach
+listenerObj.detach
+------------------
 
 Detaches the listener from the element.
 
@@ -480,6 +525,7 @@ wrap.delegate('click', 'a', function (event, target){
 ```
 
 _delegate with function_
+
 ```javascript
 var delegation = function (node){
   return node.getElementsByTagName('foo')
