@@ -1,5 +1,5 @@
-!function ($){
-  var listener = listener.noConflict()
+!function (context, $){
+  var listener = context.listener.noConflict()
   // add $.listener
   $.ender({
     listener: listener,
@@ -75,4 +75,4 @@
 
     return wrapper
   }
-}(ender || $);
+}(this, ender || $);

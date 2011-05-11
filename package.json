@@ -1,7 +1,7 @@
 {
   "name": "listener",
   "description": "A no frills cross-browser DOM event listener with ender integration",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/rpflorence/listener",
   "authors": ["Ryan Florence <rpflorence+npm@gmail.com> (http://ryanflorence.com)"],
   "repository": {
